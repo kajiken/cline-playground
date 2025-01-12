@@ -1,4 +1,4 @@
-以下の<Goal>の要件を達成するために下記の順序で作業してください。
+以下の <goal> の要件を達成するために下記の順序で作業してください。
 
 1. 要件を確認・整理する
 2. プロジェクトの影響範囲を確認する
@@ -12,36 +12,50 @@ git checkout -b <branch_name>
 gh pr create --title "タイトル" --body "<pr_format>"
 ```
 
-<task_file>の出力フォーマットは<output_format>の構造に従ってください。
-<pr_format>は　`.github/pull_request_template.md` の構造に従ってください。
-<branch_name>は timestamp を利用して重複しないようにしてください。
+以下のルールを守ってください。
 
-<project_context>
+- <task_file>の出力フォーマットは<output_format>の構造に従ってください
+- <pr_format>は　`.github/pull_request_template.md` の構造に従ってください
+- <branch_name>は timestamp を利用して重複しないようにしてください
 
-- コーディング規約：
-- アーキテクチャ規約：
-  </project_context>
+以下の点について特に詳細な検討を行ってください：
 
-<goal>
-## 目的
-{{ここをアップデートする}}
+1. 変更による副作用
+2. パフォーマンスへの影響
+3. セキュリティリスク
+4. テスト戦略
 
-## 期待される成果
-{{ここをアップデートする}}
-</goal>
-
-<constraints>
-制約条件があればここに箇条書き
-</constraints>
-
-<resources>
-- JIRAチケット：
-- 類似実装のPull Request:
-</resources>
+---
 
 <task_file>
-agent/tasks/6.md
+
+agent/tasks/{n}.md
+
 </task_file>
+
+<goal>
+
+# 目的
+{{ここをアップデートする}}
+
+# 期待される成果
+{{ここをアップデートする}}
+
+</goal>
+
+<resources>
+  
+- JIRAチケット：
+- 類似実装のPull Request:
+
+</resources>
+
+---
+
+<project_context>
+- コーディング規約：
+- アーキテクチャ規約：
+</project_context>
 
 <output_format>
 
@@ -126,10 +140,3 @@ agent/tasks/6.md
   ...
 
 </output_format>
-
-以下の点について特に詳細な検討を行ってください：
-
-1. 変更による副作用
-2. パフォーマンスへの影響
-3. セキュリティリスク
-4. テスト戦略
