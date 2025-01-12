@@ -26,7 +26,7 @@ export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
       </div>
       <div className="flex items-center space-x-4">
         <span className="text-sm text-gray-500">
-          {todo.createdAt.toLocaleDateString()}
+          {new Date(todo.createdAt).toLocaleDateString()}
         </span>
         <button
           onClick={() => onDelete(todo.id)}
