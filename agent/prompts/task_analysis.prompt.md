@@ -29,7 +29,7 @@ gh pr create --title "タイトル" --body "<pr_format>"
 
 <task_file>
 
-agent/tasks/{n}.md
+agent/tasks/{n}.task.md
 
 </task_file>
 
