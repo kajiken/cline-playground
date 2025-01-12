@@ -8,12 +8,13 @@
 6. GitHub コマンドラインを利用して Pull Request を作成する
 
 ```bash
-git checkout -b <ブランチ名>
-gh pr create --title "タイトル" --body "説明文"
+git checkout -b <branch_name>
+gh pr create --title "タイトル" --body "<pr_format>"
 ```
 
 <task_file>の出力フォーマットは<output_format>の構造に従ってください。
-branch 名は timestamp を利用して重複しないようにしてください。
+<pr_format>は　`.github/pull_request_template.md` の構造に従ってください。
+<branch_name>は timestamp を利用して重複しないようにしてください。
 
 <project_context>
 
@@ -40,12 +41,12 @@ branch 名は timestamp を利用して重複しないようにしてくださ�
 </resources>
 
 <task_file>
-agent/task/1.md
+agent/tasks/1.md
 </task_file>
 
 <output_format>
 
-# タスクのタイトル
+# [タスクのタイトル]
 
 ## 1. 概要
 
@@ -88,15 +89,17 @@ agent/task/1.md
 
 ## 5. タスク分解
 
-1. 環境セットアップ
+### 1. 環境セットアップ
 
-   - 内容: [具体的な作業]
-   - 工数: [予想時間]
+- 内容: [具体的な作業]
+- 工数: [予想時間]
 
-2. 機能実装
-   - 内容: [具体的な作業]
-   - 工数: [予想時間]
-     ...
+### 2. 機能実装
+
+- 内容: [具体的な作業]
+- 工数: [予想時間]
+
+...
 
 ## 6. 実装方針
 
@@ -115,7 +118,7 @@ agent/task/1.md
    ...
 
 ## 7. 関連リンク
-
+- [title](URL)
 </output_format>
 
 以下の点について特に詳細な検討を行ってください：
