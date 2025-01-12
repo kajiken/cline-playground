@@ -23,7 +23,10 @@ export async function updateTodoStatus(
 ): Promise<Todo> {
   return prisma.todo.update({
     where: { id },
-    data: { completed },
+    data: {
+      completed,
+      completedAt: completed ? new Date() : null,
+    },
   });
 }
 

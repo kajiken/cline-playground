@@ -25,9 +25,16 @@ export function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
         </span>
       </div>
       <div className="flex items-center space-x-4">
-        <span className="text-sm text-gray-500">
-          {new Date(todo.createdAt).toLocaleDateString()}
-        </span>
+        <div className="flex flex-col text-sm">
+          <span className="text-gray-500">
+            作成: {new Date(todo.createdAt).toLocaleDateString()}
+          </span>
+          {todo.completedAt && (
+            <span className="text-green-600">
+              完了: {new Date(todo.completedAt).toLocaleDateString()}
+            </span>
+          )}
+        </div>
         <button
           onClick={() => onDelete(todo.id)}
           className="text-red-500 hover:text-red-700"
