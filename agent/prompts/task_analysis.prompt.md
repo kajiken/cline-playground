@@ -45,7 +45,7 @@ agent/task/1.md
 
 <output_format>
 
-# [タスクのタイトル]
+# タスクのタイトル
 
 ## 1. 概要
 
