@@ -77,7 +77,10 @@ CRITICAL: `cline_docs/` ディレクトリまたは以下のファイルが存�
 ### Starting Tasks
 
 - `Memory Bank Files` を以下の順序で必要なドキュメントを確認する
-  1.
+  1. project_roadmap.md
+  2. current_task.md
+  3. tech_stack.md
+  4. codebase_summary.md
 - これらを読む前に他のドキュメントを操作すると、何か「悪いこと」が起こる
 - いずれかのファイルが欠けている場合、作成する
 - ドキュメント間に矛盾があれば、ユーザーに確認を求める
@@ -149,6 +152,7 @@ DO NOT read or modify:
 -   Use environment variables for secrets
 -   Keep credentials out of logs and output
 
+---
 
 // refs. https://github.com/cline/cline/blob/main/docs/prompting/README.md#security-best-practices-
 # Project Guidelines
