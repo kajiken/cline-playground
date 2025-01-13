@@ -1,100 +1,102 @@
-# Welcome to React Router!
+# Cline Playground
 
-A modern, production-ready template for building full-stack React applications using React Router.
+モダンなウェブテクノロジーを活用した Todo アプリケーション。
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## プロジェクトの概要
 
-## Features
+このプロジェクトは、最新のウェブ技術を使用して効率的なタスク管理を実現する Todo アプリケーションです。
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+### 主な機能
 
-## Getting Started
+- タスクの作成、更新、削除、完了の管理
+- データの永続化（Prisma を使用）
+- 直感的なユーザーインターフェース
 
-### Installation
+## 技術スタック
 
-Install the dependencies:
+### フロントエンド
+
+- React
+- TypeScript
+- TailwindCSS
+- Vite (開発サーバー & ビルドツール)
+
+### バックエンド
+
+- Node.js
+- Prisma (ORM)
+- SQLite (開発環境データベース)
+
+### テスト
+
+- Vitest (ユニットテスト)
+- Playwright (E2E テスト)
+
+### インフラストラクチャ
+
+- Docker
+- Docker Compose
+
+## 開発環境のセットアップ
+
+1. 必要な依存関係のインストール:
 
 ```bash
 npm install
 ```
 
-### Development
+2. データベースのセットアップ:
 
-Start the development server with HMR:
+```bash
+npx prisma migrate dev
+```
+
+3. 開発サーバーの起動:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
+4. テストの実行:
 
 ```bash
-npm run build
+# ユニットテスト
+npm run test
+
+# E2Eテスト
+npm run test:e2e
 ```
 
-## Deployment
-
-### Docker Deployment
-
-This template includes three Dockerfiles optimized for different package managers:
-
-- `Dockerfile` - for npm
-- `Dockerfile.pnpm` - for pnpm
-- `Dockerfile.bun` - for bun
-
-To build and run using Docker:
-
-```bash
-# For npm
-docker build -t my-app .
-
-# For pnpm
-docker build -f Dockerfile.pnpm -t my-app .
-
-# For bun
-docker build -f Dockerfile.bun -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## プロジェクト構造
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+/app
+  /components   # Reactコンポーネント
+  /lib         # ユーティリティ関数とDB操作
+  /models      # データモデルの型定義
+  /routes      # APIルートとページコンポーネント
+  /welcome     # ウェルカムページ関連
+/prisma        # データベース関連
+/tests         # テストファイル
 ```
 
-## Styling
+## API エンドポイント
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+- GET /api/todos - タスク一覧取得
+- POST /api/todos - タスク作成
+- PUT /api/todos/:id - タスク更新
+- DELETE /api/todos/:id - タスク削除
 
----
+## 開発状況
 
-Built with ❤️ using React Router.
+- 基本的な Todo 機能: 100%
+- テスト整備: 70%
+- インフラ整備: 60%
+- UI/UX 改善: 30%
+
+## 次のマイルストーン
+
+1. テストカバレッジの向上
+2. UI/UX の改善
+3. 追加機能の実装
+4. インフラストラクチャの強化
