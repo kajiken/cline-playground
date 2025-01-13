@@ -1,100 +1,66 @@
-# Welcome to React Router!
+# Cline Playground
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Todo アプリケーションのプロトタイプ開発プロジェクト
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## プロジェクト概要
 
-## Features
+- Todo の作成、表示、更新、削除機能を備えた Web アプリケーション
+- React と TypeScript を使用したフロントエンド
+- Prisma を使用したデータベース管理
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## Memory Bank
 
-## Getting Started
+プロジェクトの一貫性と継続性を保つため、以下のドキュメントを `cline_docs/` ディレクトリで管理しています：
 
-### Installation
+### 主要ドキュメント
 
-Install the dependencies:
+1. **projectRoadmap.md**
 
-```bash
-npm install
-```
+   - プロジェクトの目標と進捗状況
+   - 完了済みタスクと今後の計画
+   - 将来の拡張性についての検討
 
-### Development
+2. **currentTask.md**
 
-Start the development server with HMR:
+   - 現在進行中のタスクの詳細
+   - 実装ステップと進捗状況
+   - 次のアクションアイテム
 
-```bash
-npm run dev
-```
+3. **techStack.md**
 
-Your application will be available at `http://localhost:5173`.
+   - 使用技術とフレームワークの一覧
+   - 技術選択の理由と利点
+   - アーキテクチャの決定事項
 
-## Building for Production
+4. **codebaseSummary.md**
+   - プロジェクト構造の概要
+   - コンポーネント間の関係性
+   - データフローの説明
+   - 最近の変更点
 
-Create a production build:
+## 開発環境のセットアップ
 
-```bash
-npm run build
-```
+1. リポジトリのクローン
 
-## Deployment
+   ```bash
+   git clone https://github.com/kajiken/cline-playground.git
+   cd cline-playground
+   ```
 
-### Docker Deployment
+2. 依存関係のインストール
 
-This template includes three Dockerfiles optimized for different package managers:
+   ```bash
+   npm install
+   ```
 
-- `Dockerfile` - for npm
-- `Dockerfile.pnpm` - for pnpm
-- `Dockerfile.bun` - for bun
+3. 開発サーバーの起動
+   ```bash
+   npm run dev
+   ```
 
-To build and run using Docker:
+## 技術スタック
 
-```bash
-# For npm
-docker build -t my-app .
-
-# For pnpm
-docker build -f Dockerfile.pnpm -t my-app .
-
-# For bun
-docker build -f Dockerfile.bun -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+- フロントエンド: React, TypeScript, Tailwind CSS
+- バックエンド: Node.js, Prisma
+- データベース: SQLite (開発環境)
+- 開発ツール: Vite, ESLint, Docker
