@@ -9,7 +9,7 @@
 
 ```bash
 git checkout -b <branch_name>
-gh pr create --title "タイトル" --body "<pr_format>"
+gh pr create --title "title" --body "<pr_format>"
 ```
 
 以下のルールを守ってください。
@@ -103,15 +103,15 @@ agent/tasks/{n}.task.md
 
 ## 5. タスク分解
 
-### 1. 環境セットアップ
-１の作業概要
+### 1. タスク1
+タスク1の作業概要
 
 1. [作業内容]
 2. [作業内容]
   ...
 
-### 2. 機能実装
-2の作業概要
+### 2. タスク2
+タスク2の作業概要
 
 1. [作業内容]
 2. [作業内容]
