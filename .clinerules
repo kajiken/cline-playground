@@ -94,7 +94,7 @@ CRITICAL: `cline_docs/` ディレクトリまたは以下のファイルが存�
 
 ```bash
 git add .
-git commit -m "コミットメッセージ"
+git commit -m "commit message"
 git push origin <branch_name>
 ```
 
